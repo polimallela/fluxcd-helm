@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-deploy
+  name: helmchartflux
   labels:
-    app: example-app
+    app: helmchartflux
     test: test
   annotations:
     fluxcd.io/automated: "true"
@@ -13,7 +13,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: example-app
+      app: helmchartflux
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -23,10 +23,10 @@ spec:
   template:
     metadata:
       labels:
-        app: example-app
+        app: helmchartflux
     spec:
       containers:
-      - name: example-app
+      - name: helmchartflux
         image: chandu054/fluxcd-demo:1.0.1
         imagePullPolicy: Always
         ports:
