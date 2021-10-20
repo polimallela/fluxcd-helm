@@ -1,2 +1,0 @@
-# fluxcd-helm
-helm sample
