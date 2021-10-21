@@ -2,14 +2,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: helmchartflux
+  name: helmchartflux
   labels:
     app: helmchartflux
     test: test
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.example-app: "semver:~1.0
-    
+    fluxcd.io/tag.example-app: "semver:~1.0"
 spec:
   selector:
     matchLabels:
